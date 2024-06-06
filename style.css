@@ -1,0 +1,344 @@
+:root{
+    --primarycolor:#623f;
+    --secondarycolor:#c96500;
+    --yellowcolor:#ffea00;
+    --screencolor:#f0D0B2;
+    --whitecolor:#ffffff;
+    --blackcolor:#000000;
+    --graycolor:#f5f5f5;
+    --darkgraycolor:#a7a7a7;
+}
+
+* {
+margin:0;
+padding: 0;
+box-sizing: border-box;
+outline: none;
+font-family: "Source Sans 3", sans-serif;;
+}
+body {
+width: 100%;
+height:100%;
+display: flex;
+}
+.sidebar{
+    width: 250px;
+    height: 815px;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    padding: 2%;
+    top:0;
+    left:0;
+    background-color: var(--primarycolor);
+    color:var(--whitecolor);
+}
+.sidebar-menus{
+    display: flex;
+    flex-direction: column;
+}
+.sidebar-menus a , .sidebar-logout a {
+    padding: 5% ;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    text-decoration: none;
+    color: var(--whitecolor);
+    
+}
+.sidebar-menus a ion-icon ,.sidebar-logout a ion-icon{
+    font-size: 25px;
+}
+.sidebar-menus a:hover, .sidebar-logout a:hover{
+    background-color: var(--yellowcolor);
+    border-radius: 50px;
+}
+.main{
+    width: 100%;
+    height: max-content;
+    min-height: 100vh;
+    padding: 2%;
+    background-color:var(--screencolor)
+}
+.main-navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-toggle{
+    display: none;
+}
+.search-bar{
+    width:60%;
+    height:40px;
+    display: flex;
+    border-radius: 20px;
+    justify-content: space-around;
+    background-color: var(--whitecolor);
+
+}
+.search-bar input{
+    width: 80%;
+    height: 100%;
+    border: none;
+    padding: 20px;
+    border-radius: 20px;
+}
+.search-button{
+    background-color: var(--secondarycolor);
+    border:none;
+    border-radius: 20px;
+    color: var(--whitecolor);
+    width: 145px;
+    cursor: pointer;;
+}
+.search-bar:hover{
+box-shadow: rgba(149,157,165,0.2) 0px 8px 25px;
+}
+.search-button:hover{
+background-color: var(--yellowcolor);
+}
+.profile{
+    display:flex;
+    align-items:center ;
+    gap: 0.5rem;
+}
+.cart, .user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:var(--whitecolor);
+    font-size: 20px;
+    color: var(--primarycolor);
+    height: 40px;
+    padding: 0 10px;
+    border-radius:50%;
+    text-decoration: none;
+
+}
+
+.cart:hover,.user:hover{
+    box-shadow: rgba(149,157,165,0.2) 0 8px 24px;
+}
+.main-highlight{
+    background-color: var(--secondarycolor);
+    padding: 2px;
+    margin: 3% 0;
+    border-radius: 8px;
+
+}
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title{
+    font-size: 20px;
+    margin-left: 10px;
+}
+.main-arrow{
+    font-size: 30px;
+}
+.back,.forward{
+    cursor: pointer;
+}
+.back:hover,.forward:hover{
+    color: var(--yellowcolor);
+}
+.hightlight-wrapper{
+    display: flex;
+    width: 100%;
+    gap: 1.5rem;
+    padding: 1%;
+    border-radius: 8px;
+    overflow-x: hidden;
+
+}
+.highlight-card{
+    display: flex;
+    flex-direction: row;
+    min-width: 200px;
+    height: 100%;
+    width: 80%;
+    gap: 1rem;
+    padding: 1%;
+    border-radius: 8px;
+    background-color: var(--screencolor);
+    cursor: pointer;
+}
+.highlight-card:hover{
+    background-color: var(--graycolor);
+}
+.salad-highlight{
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+}
+.salad-name h4{
+    color: var(--primarycolor);
+}
+.salad-name p{
+    color: var(--blackcolor);
+    font-size: 13px;
+}
+.coffee-highlight{
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+}
+
+.coffee-name h4{ 
+    color: var(--primarycolor);
+}
+.coffee-name p{
+    color: var(--blackcolor);
+    font-size: 13px;
+}
+
+.seefood-highlight{
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+}
+
+.seefod-name h4{ 
+    color: var(--primarycolor);
+}
+.seefod-name p{
+    color: var(--blackcolor);
+    font-size: 13px;
+}
+
+.burger-highlight{height: 40px;
+    width: 40px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;}
+
+.burger-name h4{ 
+    color: var(--primarycolor);
+}
+.burger-name p{
+    color: var(--blackcolor);
+    font-size: 13px;
+}
+.main-menu{
+    background-color: var(--graycolor);
+    padding: 2%;
+    border-radius: 8px;
+    height: 510px;
+
+}
+.menu-filter{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+.menu-arrow{
+    font-size: 20px;
+}
+.filter-wrapper{
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: hidden;
+    height: 100px;
+    width: 100%;
+    gap: 1.5rem;
+}
+.filter-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 100px;
+    height: 100%;
+    background-color:var(--whitecolor);
+    color: var(--blackcolor);
+    border-radius: 8px;
+    border: 1px solid var(--screencolor);
+    font-size: 14px;
+    cursor: pointer;
+}
+.filter-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 60%;
+    font-size: 30px;
+    background-color: var(--screencolor);
+    color: var(--primarycolor);
+    border-radius: 8px;
+}
+.filter-card:hover{
+    background-color: var(--primarycolor);
+    color: var(--whitecolor);
+}
+.filter-card:hover .filter-icon{
+    background-color: var(--whitecolor);
+}
+.divide{
+    margin: 1rem 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--primarycolor);
+    border: none;
+}
+.main-detail{
+    margin: 1rem 0 1.5rem 0;
+}
+.detail-wrapper{
+    display: flex;
+    width: 100%;
+    margin-top: 1rem;
+    gap: 2%;
+    border-radius: 8px;
+}
+.detail-card{
+    min-height: 150px;
+    height:150px;
+    background-color: var(--whitecolor);
+    border-radius: 8px;
+    margin: 1% 0;
+    box-shadow: rgba(176, 176, 176,0.2) 0px 2px 8px 0px;
+    cursor: pointer;
+    width: 200px;
+}
+.detail-img{
+    width: 100%;
+    height: 180px;
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.7);
+}
+.detail-desc{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 3%;
+    width: 100%;
+}
+.detail-sub{
+    font-size: 12px;
+    margin: 1% 0;
+    letter-spacing: 0.5;
+    color: var(--darkgraycolor);
+}
+.detail-card:hover .detail-img:hover{
+    filter: opacity(1);
+}
+
+
+
